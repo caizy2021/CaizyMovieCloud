@@ -1,0 +1,52 @@
+<!-- 顶部导航开始 -->
+<view class="top-nav">
+  <view class="top-nav-inner">
+    <!-- 自动定位城市开始 -->
+    <view class="city-entry" bindtap="tapToCitylist">
+      <text class="city-name">{{cityname}}</text>
+      <text class="city-entry-arrow"></text>
+    </view>
+    <!-- 自动定位城市结束 -->
+    <!-- 选项卡开始 -->
+    <view class="switch-hot">
+      <text bindtap="tapNav" class="hot-item {{cid==1?'hot-item-active':''}}" data-id="1">热映</text>
+      <text bindtap="tapNav" class="hot-item {{cid==2?'hot-item-active':''}}" data-id="2">待映</text>
+      <text bindtap="tapNav" class="hot-item {{cid==3?'hot-item-active':''}}" data-id="3">经典</text>
+    </view>
+    <!-- 选项卡结束 -->
+    <!-- 搜索区域开始 -->
+    <view class="search-icon"></view>
+    <!-- 搜索区域结束 -->
+  </view>
+</view>
+<!-- 顶部导航结束 -->
+<!-- 主要区域开始 -->
+<view class="main-container">
+  <!-- 单一影片开始 -->
+  <view class="movie-item" wx:for="{{movielist}}" wx:key="index">
+    <navigator url="/pages/movie/movie?id={{item.id}}" hover-class="none">
+      <!-- 图片开始 -->
+      <view class="movie-item-avatar">
+        <image src="{{item.cover}}"></image>
+      </view>
+      <!-- 图片结束 -->
+      <!-- 内容容器开始 -->
+      <view class="movie-item-content-wrapper">
+        <view class="content">
+          <view class="title">{{item.moviename}}</view>
+          <view class="line-ellipsis">{{item.movietype}}</view>
+          <view class="line-ellipsis">主演:{{item.actors}}</view>
+        </view>
+        <!-- 评分开始 -->
+        <view class="score-wrapper">
+          <view class="score">{{item.score}}</view>
+          <!-- <view>暂无评分</view> -->
+        </view>
+        <!-- 评分结束 -->
+      </view>
+      <!-- 内容容器结束 -->
+    </navigator>
+  </view>
+  <!-- 单一影片结束 -->
+</view>
+<!-- 主要区域结束 -->
