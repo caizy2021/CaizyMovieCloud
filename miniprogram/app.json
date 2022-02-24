@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/me/me",
     "pages/index/index",
     "pages/movie/movie",
     "pages/citylist/citylist",
-    "pages/theatre/theatre",
-    "pages/me/me"
+    "pages/theatre/theatre"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -42,6 +42,5 @@
       "desc": "你的位置信息将用于小程序位置接口的效果展示"
     }
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
