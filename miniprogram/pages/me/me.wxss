@@ -1,1 +1,19 @@
 /* pages/me/me.wxss */
+.info{
+    background-color: #DD403B;
+    height: 250rpx;
+    padding-top: 20px;
+}
+.info van-image{
+    width: 170rpx;
+    height: 170rpx;
+    display: block;
+    margin: 0 auto;
+}
+.info text{
+    color: white;
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}

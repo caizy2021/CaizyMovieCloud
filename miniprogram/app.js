@@ -15,6 +15,7 @@ App({
   globalData: {
     userInfo: null,
     CITYNAME: '未选择',
-    qqmapsdk: null
+    qqmapsdk: null,
+    openid: 0
   }
 })

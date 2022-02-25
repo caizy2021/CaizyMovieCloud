@@ -1,1 +1,9 @@
-<!--pages/me/me.wxml-->
+<view class="info">
+    <van-image round width="170rpx" height="170rpx" src="{{avatar}}" bindtap="tapAvatar" />
+    <text>{{nickname}}</text>
+</view>
+
+<van-cell icon="user-o" title="个人信息" is-link />
+<van-cell icon="like-o" title="我的收藏" is-link />
+<van-cell icon="gold-coin-o" title="我的钱包" is-link />
+<van-cell icon="setting-o" title="设置" is-link />
